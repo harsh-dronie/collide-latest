@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'Lucida Handwriting';
     src: url('/path-to-your-font/LucidaHandwriting.ttf') format('truetype');
@@ -254,7 +253,7 @@ button:hover {
 #inclusivity {
     background-color: #f9f6db;
     color: #333;
-    padding: 4rem 2rem;
+    padding: 4rem 10rem;
     display: flex;
     flex-direction: row-reverse; /* Flip the content and image */
     justify-content: space-between;
@@ -267,9 +266,14 @@ button:hover {
     margin-left: 40px; /* Margin adjusted to the left to separate from text */
 }
 
+#inclusivity .image-container img {
+    width: 100%;
+    height: auto;
+}
+
 #inclusivity .content {
     flex: 1;
-    text-align: left;
+    text-align: center;
 }
 
 #inclusivity h2 {
@@ -407,30 +411,46 @@ h2 {
 footer {
     background-color: black;
     color: white;
-    padding: 2rem;
-    display: flex;
-}
-
-footer.content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-}
+    padding: 5rem;
+    display: flex; 
+    flex-direction: row; /* Change this to row */
+    align-items: center; 
+    justify-content: space-around; /* Evenly distribute space around items */
+  }
+  
+  footer .content {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    width: 100%; 
+  }
+  
+  /* ... rest of your CSS ... */
 
 footer h3, footer h4 {
-    color: #fffdec;
+    color: #ffe600;
     margin-bottom: 1rem;
+    flex: 1; /* Allow headers to grow equally */
 }
 
 footer ul {
     list-style-type: none;
     padding: 0;
+    margin: 5px;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Arrange list items in a column */
+    align-items: center; /* Center align list items */
+}
+
+footer ul li {
+    margin: 5px;
 }
 
 footer a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
+    margin: 0.5rem 0; /* Add margin for spacing */
 }
 
 footer a:hover {
@@ -555,7 +575,7 @@ footer a:hover {
     width: 15vw; /* Fill the width of its container */
     height: 15vw; /* Set height to 0 */
     border-radius: 50%;
-    margin: 20px auto; /* Center the image and add some vertical margin */
+    margin: 80px auto; /* Center the image and add some vertical margin */
     box-shadow: 0 0 20px 5px #FFEB3B;
     object-fit: cover; /* Ensure the image covers the entire container */
     object-position: center; /* Center the image within the container */
@@ -978,3 +998,5 @@ p {
 .accordion.active .accordion__answer {
     display: block;
 }
+
+
